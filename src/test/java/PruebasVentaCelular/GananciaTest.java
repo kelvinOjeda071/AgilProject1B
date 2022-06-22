@@ -27,7 +27,7 @@ public class GananciaTest {
         System.out.println("Prueba N:. 4");
     }
 
-    @Test (expected = AssertionError.class)
+    @Ignore
     public void given_AfileDirectorythatDoesNotExist_when_cargarArchivos_then_ok(){
         System.out.println("Prueba N:. 5");
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
