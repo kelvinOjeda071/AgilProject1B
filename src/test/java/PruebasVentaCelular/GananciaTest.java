@@ -18,7 +18,7 @@ public class GananciaTest {
     private static final double DELTA = 1e-15;
 
 
-    @BeforeClass
+    @Ignore
     public static void given_AfileDirectory_when_cargarArchivos_then_ok(){
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
         int expect = 3;
@@ -60,7 +60,7 @@ public class GananciaTest {
         assertEquals(expected, actual, 0.0);
     }
 
-    @AfterClass
+    @Ignore
     public static void given_twoNumbersAndModel_when_generarFicheroGanancia_then_ok(){
         System.out.println("Prueba N:. 7");
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
@@ -69,7 +69,7 @@ public class GananciaTest {
         assertTrue(NoExisteError);
     }
 
-    @Test (timeout = 100)
+    @Ignore
     public void given_TwoNumberAndModelForCalculateTime_when_generarFicheroGanancia_then_ok(){
         System.out.println("Prueba N:. 8");
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
