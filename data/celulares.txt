@@ -1,0 +1,3 @@
+Redmi note 9,Xiomi,1234567889,12/20/2030,La garantia solo se aplica por defectos de fabrica,180,150
+Redmi note 8,Xiomi,1234567810,12/20/2030,La garantia solo se aplica por defectos de fabrica,200,180
+Redmi note 8,Xiomi,1234567811,12/20/2030,La garantia solo se aplica por defectos de fabrica,200,180
