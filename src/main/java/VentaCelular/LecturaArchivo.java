@@ -79,7 +79,7 @@ public class LecturaArchivo {
     }
     public boolean generarFicheroGanancia(String modelo, float precioCompraEmpresa, float precioDeVenta) {
         boolean noExisteError = true;
-        File fichero = new File("..data\\ganancias.txt");
+        File fichero = new File("..//ganancias.txt");
         float ganancia = precioDeVenta - precioCompraEmpresa;
         try {
             FileWriter w = new FileWriter(fichero);

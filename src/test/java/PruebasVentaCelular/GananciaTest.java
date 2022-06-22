@@ -22,9 +22,18 @@ public class GananciaTest {
     public static void given_AfileDirectory_when_cargarArchivos_then_ok(){
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
         int expect = 3;
-        int actual = lecturaDeArchivo.cargarCelulares("data\\celulares.txt").size();
+        int actual = lecturaDeArchivo.cargarCelulares("..//data//celulares.txt").size();
         assertEquals(actual, expect);
         System.out.println("Prueba N:. 4");
+    }
+    @Test (expected = AssertionError.class)
+    public void given_AfileDirectorythatDoesNotExist_when_cargarArchivos_then_ok(){
+        System.out.println("Prueba N:. 5");
+        LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
+        int expect = 3;
+        int actual = lecturaDeArchivo.cargarCelulares(FileSystemView.
+                getFileSystemView().getDefaultDirectory().getPath()+"//celulares.txt").size();
+        assertEquals(actual, expect);
     }
 
     @Before
@@ -60,7 +69,7 @@ public class GananciaTest {
         assertEquals(expected, actual, 0.0);
     }
 
-    @Ignore
+    @AfterClass
     public static void given_twoNumbersAndModel_when_generarFicheroGanancia_then_ok(){
         System.out.println("Prueba N:. 7");
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
@@ -69,7 +78,7 @@ public class GananciaTest {
         assertTrue(NoExisteError);
     }
 
-    @Ignore
+    @Test (timeout = 100)
     public void given_TwoNumberAndModelForCalculateTime_when_generarFicheroGanancia_then_ok(){
         System.out.println("Prueba N:. 8");
         LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
