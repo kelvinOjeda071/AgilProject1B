@@ -27,15 +27,6 @@ public class GananciaTest {
         System.out.println("Prueba N:. 4");
     }
 
-    @Ignore
-    public void given_AfileDirectorythatDoesNotExist_when_cargarArchivos_then_ok(){
-        System.out.println("Prueba N:. 5");
-        LecturaArchivo lecturaDeArchivo = new LecturaArchivo();
-        int expect = 3;
-        int actual = lecturaDeArchivo.cargarCelulares("\\celulares.txt").size();
-        assertEquals(actual, expect);
-    }
-
     @Before
     public void setUp(){
         g = new Ganancia();
